@@ -1,0 +1,25 @@
+{% extends 'ranki/base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <p>{{ card.question }}</p>
+
+                <p>
+                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseAnswer"
+                            aria-expanded="false" aria-controls="collapseExample">Show answer
+                    </button>
+                </p>
+                <div class="collapse" id="collapseAnswer">
+                    <div class="card card-body">
+                        <p>{{ card.answer }}</p>
+                        <button class="btn btn-primary" >Again</button>
+                        <button class="btn btn-primary" >Good</button>
+                        <button class="btn btn-primary" >Easy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

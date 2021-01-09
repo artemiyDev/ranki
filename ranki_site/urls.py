@@ -20,7 +20,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('ranki.urls'))
+    path('api/', include('ranki.urls'))
 ]
 
 if settings.DEBUG:

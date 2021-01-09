@@ -2,7 +2,7 @@ from django import forms
 from .models import Card, Deck
 
 
-class CardForm(forms.ModelForm):
+class CardCreateForm(forms.ModelForm):
     class Meta:
         model = Card
         fields = ['question', 'answer', 'deck', 'image']
@@ -12,3 +12,9 @@ class CardForm(forms.ModelForm):
             'deck': forms.Select(attrs={'class': 'form-control', 'empty_label': 'None'}),
             'image': forms.FileInput(attrs={'class': 'form-control'})
         }
+
+
+# class CardUpdate(forms.ModelForm):
+#     class Meta:
+#         model = Card
+#         fields = ['repeat_date']
